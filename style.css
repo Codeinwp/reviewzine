@@ -136,10 +136,6 @@ div#navbar {
 	border: 0;
 	margin: 0;
 }
-
-.main-navigation {
-	border: 0 none;
-}
 .main-navigation .nav-menu > li  > a {
 	border: 0 none;
 }
@@ -162,12 +158,6 @@ div#navbar {
 .main-navigation li .sub-menu a:before {
 	display: none !important;
 }
-/*.main-navigation li:first-child a {
-	padding-left: 0;
-}
-.main-navigation li:last-child a {
-	padding-right: 0;
-}*/
 
 /* Homepage Slider */
 .entry-overlay.entry-block .entry-overlay-meta, 
