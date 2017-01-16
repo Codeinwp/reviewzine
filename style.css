@@ -103,9 +103,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .navbar-top .container {
 	position: relative;
 }
-.main-navigation {
-	margin-bottom: 25px;
-}
 .top-navigation ul li a,
 .navbar-btn,
 .navbar-top .social-icons a i, 
@@ -135,8 +132,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 /* Navigation */
 div#navbar {
+	border-radius: 0;
 	border: 0;
 	margin: 0;
+}
+#header {
+	margin-bottom: 25px;
 }
 .main-navigation .nav-menu > li  > a {
 	border: 0 none;
