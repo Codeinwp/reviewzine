@@ -52,12 +52,9 @@ The exceptions to this license are as follows:
 
 	Images from screenshot:
 
-	* https://pixabay.com/en/wristwatch-technology-time-watch-1283184/
-    * https://pixabay.com/en/ipad-samsung-music-play-google-605439/
-    * https://pixabay.com/en/macbook-apple-light-laptop-923866/
-    * https://pixabay.com/en/macbook-notebook-apple-inc-336651/
-    * https://pixabay.com/en/desk-laptop-notebook-computer-622532/
-    * https://pixabay.com/en/macbook-laptop-computer-tablet-923678/
-    * https://pixabay.com/en/tablet-ipad-screen-internet-184888/
-    * https://pixabay.com/en/usb-stick-electronics-connection-252249/
-    * https://pixabay.com/en/headphones-instagram-video-games-1377194/
+	* https://www.pexels.com/photo/sky-woman-clouds-girl-123335/
+    * https://www.pexels.com/photo/reflection-playstation-pad-gaming-18174/
+    * https://www.pexels.com/photo/black-flat-screen-tv-on-white-wooden-tv-rack-in-living-room-88737/
+    * https://unsplash.com/photos/tk2_RBZq7RA
+    * https://www.pexels.com/photo/person-playing-sony-playstation-inside-living-room-127604/
+    * https://www.pexels.com/photo/man-holding-black-game-controller-133579/ 
