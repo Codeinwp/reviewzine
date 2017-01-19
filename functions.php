@@ -63,9 +63,8 @@ function reviewzine_scripts() {
 
 	wp_enqueue_style( 'reviewzine-style', get_stylesheet_uri() );
 
-	if ( is_page_template( 'template-frontpage.php' ) ) {
-		wp_dequeue_script( 'islemag-script-index' );
-		wp_enqueue_script( 'reviewzine-script-index', get_stylesheet_directory_uri() . '/js/script.index.js', array( 'jquery' ), '1.0.0', true );
+	if ( 'page' == get_option( 'show_on_front' ) && is_front_page() ) {
+		wp_enqueue_script( 'reviewzine-script-index', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery','islemag-script-index' ), '1.0.0', true );
 	}
 
 }
