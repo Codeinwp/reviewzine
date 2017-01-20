@@ -72,7 +72,7 @@
 						break;
 					}
 					if ( ! empty( $icon_class ) ) {  ?>
-					  <span class="entry-format"><i class="fa <?php echo $icon_class; ?>"></i></span>
+					  <span class="entry-format"><i class="fa <?php echo esc_attr( $icon_class ); ?>"></i></span>
 					<?php
 					} ?>
 					<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>

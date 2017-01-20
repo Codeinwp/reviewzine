@@ -1,5 +1,8 @@
 jQuery(document).ready(function() {
 
+    /**
+     * Top Slider
+     **/
     jQuery('.owl-carousel.islemag-top-carousel').owlCarousel('destroy').owlCarousel({
         loop: true,
         margin: 0,
