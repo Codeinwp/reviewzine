@@ -1,4 +1,9 @@
 
+### 1.0.3 - 20/01/2017
+**Changes:** 
+- Changed screenshot
+- Fixed issue with the main navigation menu
+
 ### 1.0.2 - 29/11/2016
 **Changes:** 
 - Added grunt
