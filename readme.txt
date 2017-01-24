@@ -20,8 +20,8 @@ A modern and clean free WordPress theme for magazines, news and media websites, 
 3. Click Activate to use your new theme right away.
 
 = License =
-ReviewZine WordPress theme, Copyright (C) 2015 Themeisle.com
-ReviewZine WordPress theme is licensed under the GPL3.
+ReviewZine WordPress theme, Copyright (C) 2017 Themeisle.com
+ReviewZine WordPress theme is licensed under the GPL2 or later.
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
 The exceptions to this license are as follows:
