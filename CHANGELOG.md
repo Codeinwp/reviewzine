@@ -1,4 +1,11 @@
 
+### 1.0.4 - 25/01/2017
+**Changes:** 
+- Make license declaration constant
+- Fixed escaping issues
+- Remove lorem ipsum entry
+- Fixed grunt errors
+
 ### 1.0.3 - 20/01/2017
 **Changes:** 
 - Changed screenshot
