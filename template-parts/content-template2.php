@@ -59,7 +59,7 @@ if ( $wp_query->have_posts() ) : ?>
 				$rating = cwppos_calc_overall_rating( $postid );
 				if ( ! empty( $rating['option1'] ) ) {  ?>
 					<div class="star-ratings-css">
-					  <div class="star-ratings-css-top" style="width: <?php echo $rating['overall']; ?>%">
+					  <div class="star-ratings-css-top" style="width: <?php echo esc_attr( $rating['overall'] ); ?>%">
 						<span><i class="fa fa-star"></i></span>
 						<span><i class="fa fa-star"></i></span>
 						<span><i class="fa fa-star"></i></span>

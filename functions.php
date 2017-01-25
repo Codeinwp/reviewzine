@@ -440,7 +440,7 @@ function reviewzine_add_content_at_the_bottom_of_slider_posts() {
 			if ( ! empty( $rating['option1'] ) ) {
 				?>
 				<div class="star-ratings-css">
-					<div class="star-ratings-css-top" style="width: <?php echo $rating['overall']; ?>%"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span></div>
+					<div class="star-ratings-css-top" style="width: <?php echo esc_attr( $rating['overall'] ); ?>%"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span></div>
 					<div class="star-ratings-css-bottom"><span><i class="fa fa-star-o"></i></span><span><i class="fa fa-star-o"></i></span><span><i class="fa fa-star-o"></i></span><span><i class="fa fa-star-o"></i></span><span><i class="fa fa-star-o"></i></span></div>
 				</div>
 			<?php
