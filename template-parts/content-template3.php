@@ -70,7 +70,7 @@ if ( $wp_query->have_posts() ) : ?>
 								$rating = cwppos_calc_overall_rating( $postid );
 								if ( ! empty( $rating['option1'] ) ) {  ?>
 									<div class="star-ratings-css">
-									  <div class="star-ratings-css-top" style="width: <?php echo $rating['overall']; ?>%">
+									  <div class="star-ratings-css-top" style="width: <?php echo esc_attr( $rating['overall'] ); ?>%">
 										<span><i class="fa fa-star"></i></span>
 										<span><i class="fa fa-star"></i></span>
 										<span><i class="fa fa-star"></i></span>
@@ -129,7 +129,7 @@ if ( $wp_query->have_posts() ) : ?>
 							$rating = cwppos_calc_overall_rating( $postid );
 							if ( ! empty( $rating['option1'] ) ) {  ?>
 								<div class="star-ratings-css">
-								  <div class="star-ratings-css-top" style="width: <?php echo $rating['overall']; ?>%">
+								  <div class="star-ratings-css-top" style="width: <?php echo esc_attr( $rating['overall'] ); ?>%">
 									<span><i class="fa fa-star"></i></span>
 									<span><i class="fa fa-star"></i></span>
 									<span><i class="fa fa-star"></i></span>
@@ -170,7 +170,7 @@ if ( $wp_query->have_posts() ) : ?>
 					<div class="entry-media islemag-t3-small">
 					  <a href="<?php echo esc_url( get_category_link( $category[0]->cat_ID ) ); ?>" class="category-block" title="<?php esc_html_e( 'Category', 'reviewzine' ); ?> <?php echo esc_attr( $category[0]->cat_name ); ?>"><?php echo esc_attr( $category[0]->cat_name ); ?></a>
 					  <figure>
-						<a href="<?php the_permalink(); ?>" title="Ipsa quasi praesentium eos">
+						<a href="<?php the_permalink(); ?>">
 							<?php
 							$thumb_id = get_post_thumbnail_id( $postid );
 							$thumb_meta = wp_get_attachment_metadata( $thumb_id );
@@ -194,7 +194,7 @@ if ( $wp_query->have_posts() ) : ?>
 						$rating = cwppos_calc_overall_rating( $postid );
 						if ( ! empty( $rating['option1'] ) ) {  ?>
 							<div class="star-ratings-css">
-								<div class="star-ratings-css-top" style="width: <?php echo $rating['overall']; ?>%">
+								<div class="star-ratings-css-top" style="width: <?php echo esc_attr( $rating['overall'] ); ?>%">
 								  <span><i class="fa fa-star"></i></span>
 								  <span><i class="fa fa-star"></i></span>
 								  <span><i class="fa fa-star"></i></span>
@@ -256,7 +256,7 @@ if ( $wp_query->have_posts() ) : ?>
 						$rating = cwppos_calc_overall_rating( $postid );
 						if ( ! empty( $rating['option1'] ) ) {  ?>
 							<div class="star-ratings-css">
-								<div class="star-ratings-css-top" style="width: <?php echo $rating['overall']; ?>%">
+								<div class="star-ratings-css-top" style="width: <?php echo esc_attr( $rating['overall'] ); ?>%">
 								  <span><i class="fa fa-star"></i></span>
 								  <span><i class="fa fa-star"></i></span>
 								  <span><i class="fa fa-star"></i></span>
