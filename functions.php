@@ -471,3 +471,13 @@ function reviewzine_hide_default_title_on_slider_posts() {
 	return false;
 }
 add_filter( 'islemag_filter_article_title_on_slider_posts', 'reviewzine_hide_default_title_on_slider_posts' );
+
+add_filter( 'get_the_archive_title', function ( $title ) {
+
+	if( is_category() ) {
+		$title = single_cat_title( '', false );
+		return __( 'Category', 'reviewzine' ).'<span class="category-name">'.esc_html( $title ).'</span>';
+	}
+
+	return $title;
+});
