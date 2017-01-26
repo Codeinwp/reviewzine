@@ -403,7 +403,7 @@ add_action( 'islemag_entry_footer', 'reviewzine_entry_footer', 9 );
  * Filter the date format
  */
 function reviewzine_date_format() {
-	return 'F';
+	return _x( 'F','month date format','reviewzine' );
 }
 add_filter( 'islemag_date_format', 'reviewzine_date_format' );
 
