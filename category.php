@@ -14,12 +14,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 						<header class="page-header">
 							<h1><span>
-							<?php
-								_e( 'Category', 'reviewzine' );
-								echo '<span class="category-name">';
-								single_cat_title( '' );
-								echo '</span>';
-							?>
+							<?php the_archive_title(); ?>
 							</span></h1>
 							<?php
 								the_archive_description( '<div class="taxonomy-description">', '</div>' );
@@ -35,7 +30,7 @@ get_header(); ?>
 						endwhile;
 
 						echo '<div class="reviewzine-pagination">';
-						echo paginate_links( array( 'prev_next' => false ) );
+							the_posts_pagination( array( 'prev_next' => false ) );
 						echo '</div>';
 
 					else :

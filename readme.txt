@@ -23,6 +23,8 @@ A modern and clean free WordPress theme for magazines, news and media websites, 
 ReviewZine WordPress theme, Copyright (C) 2017 Themeisle.com
 ReviewZine WordPress theme is licensed under the GPL2 or later.
 
+ReviewZine is a child theme for the Islemag theme https://wordpress.org/themes/islemag/ .
+
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
 The exceptions to this license are as follows:
 

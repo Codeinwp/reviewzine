@@ -120,7 +120,7 @@ function reviewzine_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'      => 'WP Product Review',
+			'name'      => __( 'WP Product Review','reviewzine' ),
 			'slug'      => 'wp-product-review',
 			'required'  => false,
 		),
@@ -272,7 +272,8 @@ function reviewzine_the_post_navigation() {
 	?>
 	<div class="reviewzine-pagination">
 		<?php
-		echo paginate_links( array( 'prev_next' => false ) ); ?>
+		the_posts_pagination( array( 'prev_next' => false ) );
+		?>
 	</div>
 	<?php
 
@@ -402,7 +403,7 @@ add_action( 'islemag_entry_footer', 'reviewzine_entry_footer', 9 );
  * Filter the date format
  */
 function reviewzine_date_format() {
-	return 'F';
+	return _x( 'F','month date format','reviewzine' );
 }
 add_filter( 'islemag_date_format', 'reviewzine_date_format' );
 
@@ -470,3 +471,13 @@ function reviewzine_hide_default_title_on_slider_posts() {
 	return false;
 }
 add_filter( 'islemag_filter_article_title_on_slider_posts', 'reviewzine_hide_default_title_on_slider_posts' );
+
+add_filter( 'get_the_archive_title', function ( $title ) {
+
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+		return __( 'Category', 'reviewzine' ) . '<span class="category-name">' . esc_html( $title ) . '</span>';
+	}
+
+	return $title;
+});
