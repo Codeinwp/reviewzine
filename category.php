@@ -35,7 +35,7 @@ get_header(); ?>
 						endwhile;
 
 						echo '<div class="reviewzine-pagination">';
-						echo paginate_links( array( 'prev_next' => false ) );
+							the_posts_pagination( array( 'prev_next' => false ) );
 						echo '</div>';
 
 					else :

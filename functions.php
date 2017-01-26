@@ -272,7 +272,8 @@ function reviewzine_the_post_navigation() {
 	?>
 	<div class="reviewzine-pagination">
 		<?php
-		echo paginate_links( array( 'prev_next' => false ) ); ?>
+		the_posts_pagination( array( 'prev_next' => false ) );
+		?>
 	</div>
 	<?php
 

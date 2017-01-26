@@ -1094,6 +1094,10 @@ div.affiliate-button a {
 	padding-bottom: 0;
 }
 
+.nav-links {
+	font-size: 14px;
+}
+
 /* Responsive */
 
 @media (max-width: 767px) {
