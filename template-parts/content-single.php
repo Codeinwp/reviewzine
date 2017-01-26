@@ -78,7 +78,7 @@
 					<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
 				  <div class="entry-content">
-						<?php the_content( 'Continue Reading' ); ?>
+						<?php the_content( __( 'Continue Reading','reviewzine' ) ); ?>
 						<?php
 				  			wp_link_pages( array(
 				  				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'reviewzine' ),
@@ -125,7 +125,7 @@
 						<?php } ?>
 					  <h3 class="title-underblock custom">
 						<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a>
-						<span><?php echo esc_attr( 'Author', 'reviewzine' ) ?></span>
+						<span><?php _e( 'Author', 'reviewzine' ); ?></span>
 					  </h3>
 					  <div class="author-content">
 							<?php echo get_the_author_meta( 'description', $author_id ); ?>

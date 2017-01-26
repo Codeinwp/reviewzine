@@ -120,7 +120,7 @@ function reviewzine_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'      => 'WP Product Review',
+			'name'      => __( 'WP Product Review','reviewzine' ),
 			'slug'      => 'wp-product-review',
 			'required'  => false,
 		),
