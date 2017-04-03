@@ -515,8 +515,8 @@ function islemag_prevdem_home_uri_filter_callback() {
 function reviewzine_starter_content() {
 
 	/* preview demo */
-	add_filter('islemag_prevdem_home_filter', 'islemag_prevdem_home_filter_callback');
-	add_filter('islemag_prevdem_home_uri_filter', 'islemag_prevdem_home_uri_filter_callback');
+	add_filter( 'islemag_prevdem_home_filter', 'islemag_prevdem_home_filter_callback' );
+	add_filter( 'islemag_prevdem_home_uri_filter', 'islemag_prevdem_home_uri_filter_callback' );
 
 	/*
 	 * Starter Content Support
