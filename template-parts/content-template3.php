@@ -289,7 +289,7 @@ if ( $wp_query->have_posts() ) : ?>
 					$counter++;
 				}
 			break;
-		}
+		}// End switch().
 	endwhile;
 		?>
 	</div> <!-- End .islemag-template3-posts -->
