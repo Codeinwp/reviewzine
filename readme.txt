@@ -40,4 +40,17 @@ The exceptions to this license are as follows:
     * https://www.pexels.com/photo/black-flat-screen-tv-on-white-wooden-tv-rack-in-living-room-88737/
     * https://unsplash.com/photos/tk2_RBZq7RA
     * https://www.pexels.com/photo/person-playing-sony-playstation-inside-living-room-127604/
-    * https://www.pexels.com/photo/man-holding-black-game-controller-133579/ 
+    * https://www.pexels.com/photo/man-holding-black-game-controller-133579/
+
+    Images used for demo preview:
+
+    * https://unsplash.com/photos/VHpDp_GkGgc
+    * https://unsplash.com/photos/Dl6jeyfihLk
+    * https://unsplash.com/photos/TMOeGZw9NY4
+    * https://unsplash.com/photos/xII7efH1G6o
+    * https://unsplash.com/photos/JpY2rPHFL8E
+    * https://unsplash.com/photos/67l-QujB14w
+    * https://unsplash.com/photos/GI6L2pkiZgQ
+    * https://unsplash.com/photos/n8Qb1ZAkK88
+    * https://unsplash.com/photos/3dGIvxKiQiQ
+    * https://unsplash.com/photos/hpjSkU2UYSU

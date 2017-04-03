@@ -496,9 +496,28 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 });
 
 /**
+ * Change path to child theme for preview images
+ */
+function islemag_prevdem_home_filter_callback() {
+	return get_stylesheet_directory() . '/ti-prevdem/img/';
+}
+
+/**
+ * Change theme uri to child theme for preview images
+ */
+function islemag_prevdem_home_uri_filter_callback() {
+	return get_stylesheet_directory_uri() . '/ti-prevdem/img/';
+}
+
+/**
  * Add starter content for fresh sites
  */
 function reviewzine_starter_content() {
+
+	/* preview demo */
+	add_filter('islemag_prevdem_home_filter', 'islemag_prevdem_home_filter_callback');
+	add_filter('islemag_prevdem_home_uri_filter', 'islemag_prevdem_home_uri_filter_callback');
+
 	/*
 	 * Starter Content Support
 	 */
