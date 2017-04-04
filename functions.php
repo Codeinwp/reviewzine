@@ -515,13 +515,31 @@ function islemag_prevdem_home_uri_filter_callback() {
 }
 
 /**
- * Add starter content for fresh sites
+ * Change default top banner
+ */
+function islemag_default_top_banner_callback() {
+	return get_stylesheet_directory_uri() . '/images/728x90-reviewzine.jpg';
+}
+
+/**
+ * Change default sidebar banners
+ */
+function islemag_default_sidebar_banner_callback() {
+	return get_stylesheet_directory_uri() . '/images/125x125-reviewzine.jpg';
+}
+
+/**
+ * After setup theme function
  */
 function reviewzine_starter_content() {
 
 	/* preview demo */
 	add_filter( 'islemag_prevdem_home_filter', 'islemag_prevdem_home_filter_callback' );
 	add_filter( 'islemag_prevdem_home_uri_filter', 'islemag_prevdem_home_uri_filter_callback' );
+
+	/* change default banners */
+	add_filter( 'islemag_default_top_banner_filter', 'islemag_default_top_banner_callback' );
+	add_filter( 'islemag_default_sidebar_banner_filter', 'islemag_default_sidebar_banner_callback' );
 
 	/*
 	 * Starter Content Support
