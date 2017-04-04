@@ -17,7 +17,7 @@ body {
 	font-family: "Lato";
 }
 
-.sidebar .widget h3 {
+.sidebar .widget h3, .sidebar .widget h3 > a > span {
 	font-family: "Lato";
 	font-weight: bold;
 	font-size: 24px;
