@@ -1,4 +1,10 @@
 
+### 1.0.6 - 06/04/2017
+**Changes:** 
+- Added starter content
+- Added demo preview images
+- Changed default banners
+
 ### 1.0.5 - 26/01/2017
 **Changes:** 
 - Mention parent theme credits in readme.txt
