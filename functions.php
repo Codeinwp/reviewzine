@@ -242,6 +242,7 @@ function reviewzine_footer_content() {
 	remove_action( 'islemag_footer_content', 'islemag_footer' ); ?>
 	<div class="col-md-4">
 		<?php printf(
+			/* translators: 1 - Theme name , 2 - WordPress link */
 			__( '%1$s powered by %2$s', 'reviewzine' ),
 			sprintf( '<a href="https://themeisle.com/themes/islemag/" rel="nofollow">%s</a>', esc_html__( 'ReviewZine', 'reviewzine' ) ),
 			sprintf( '<a href="http://wordpress.org/" rel="nofollow">%s</a>', esc_html__( 'WordPress', 'reviewzine' ) )
@@ -272,7 +273,9 @@ function reviewzine_the_post_navigation() {
 	?>
 	<div class="reviewzine-pagination">
 		<?php
-		the_posts_pagination( array( 'prev_next' => false ) );
+		the_posts_pagination( array(
+			'prev_next' => false,
+		) );
 		?>
 	</div>
 	<?php
@@ -335,16 +338,26 @@ function reviewzine_comment_content( $args, $comment, $depth, $add_below ) {
 			<figure class="author-avatar">
 				<?php
 				if ( $args['avatar_size'] != 0 ) {
-					echo get_avatar( $comment, 52, '', '', array( 'class' => 'media-object' ) );
+					echo get_avatar( $comment, 52, '', '', array(
+						'class' => 'media-object',
+					) );
 				} ?>
 			</figure>
 		</div>
 		<div class="media-body">
 			<div class="comment-author vcard">
-				<?php printf( __( '<h4 class="media-heading">%s</h4>', 'reviewzine' ), get_comment_author_link() ); ?>
-				<div class="reply pull-right reply-link"> <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?> </div>
+				<?php
+				/* translators: %s - the comment authors link */
+				printf( __( '<h4 class="media-heading">%s</h4>', 'reviewzine' ), get_comment_author_link() ); ?>
+				<div class="reply pull-right reply-link"> <?php comment_reply_link( array_merge( $args, array(
+					'add_below' => $add_below,
+					'depth' => $depth,
+					'max_depth' => $args['max_depth'],
+				) ) ); ?> </div>
 				<div class="comment-extra-info">
-					<?php printf( __( '<span class="comment-date">(%1$s - %2$s)</span>', 'reviewzine' ), get_comment_date(), get_comment_time() ); ?>
+					<?php
+					/* translators: 1 - the comment date, 2 - the comment title */
+					printf( __( '<span class="comment-date">(%1$s - %2$s)</span>', 'reviewzine' ), get_comment_date(), get_comment_time() ); ?>
 					<?php edit_comment_link( __( '(Edit)', 'reviewzine' ), '  ', '' ); ?>
 				</div>
 			</div>
@@ -472,7 +485,12 @@ function reviewzine_hide_default_title_on_slider_posts() {
 }
 add_filter( 'islemag_filter_article_title_on_slider_posts', 'reviewzine_hide_default_title_on_slider_posts' );
 
-add_filter( 'get_the_archive_title', function ( $title ) {
+add_filter( 'get_the_archive_title', 'reviewzine_archive_title' );
+
+/**
+ * Filter the archive title
+ */
+function reviewzine_archive_title( $title ) {
 
 	if ( is_category() ) {
 		$title = single_cat_title( '', false );
@@ -480,4 +498,72 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 	}
 
 	return $title;
-});
+};
+
+/**
+ * Change path to child theme for preview images
+ */
+function islemag_prevdem_home_filter_callback() {
+	return get_stylesheet_directory() . '/ti-prevdem/img/';
+}
+
+/**
+ * Change theme uri to child theme for preview images
+ */
+function islemag_prevdem_home_uri_filter_callback() {
+	return get_stylesheet_directory_uri() . '/ti-prevdem/img/';
+}
+
+/**
+ * Change default top banner
+ */
+function islemag_default_top_banner_callback() {
+	return get_stylesheet_directory_uri() . '/images/728x90-reviewzine.jpg';
+}
+
+/**
+ * Change default sidebar banners
+ */
+function islemag_default_sidebar_banner_callback() {
+	return get_stylesheet_directory_uri() . '/images/125x125-reviewzine.jpg';
+}
+
+/**
+ * After setup theme function
+ */
+function reviewzine_starter_content() {
+
+	/* preview demo */
+	add_filter( 'islemag_prevdem_home_filter', 'islemag_prevdem_home_filter_callback' );
+	add_filter( 'islemag_prevdem_home_uri_filter', 'islemag_prevdem_home_uri_filter_callback' );
+
+	/* change default banners */
+	add_filter( 'islemag_default_top_banner_filter', 'islemag_default_top_banner_callback' );
+	add_filter( 'islemag_default_sidebar_banner_filter', 'islemag_default_sidebar_banner_callback' );
+
+	/*
+	 * Starter Content Support
+	 */
+	add_theme_support( 'starter-content', array(
+
+		'posts' => array(
+			'home',
+			'blog',
+		),
+		'nav_menus' => array(
+			'primary'      => array(
+				'name'  => __( 'Primary Menu', 'reviewzine' ),
+				'items' => array(
+					'page_home',
+					'page_blog',
+				),
+			),
+		),
+		'options' => array(
+			'show_on_front'  => 'page',
+			'page_on_front'  => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		),
+	) );
+}
+add_action( 'after_setup_theme', 'reviewzine_starter_content' );
